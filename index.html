@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Estação do Sabor — Churrascaria</title>
+<meta name="description" content="Estação do Sabor - Churrascaria tradicional com cortes especiais, rodízio e ambiente acolhedor." />
+<link rel="stylesheet" href="index.css" />
+<link rel="icon" href="favicon.ico" />
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<div class="brand">
+<img src="logo.jpg" alt="Logo Estação do Sabor" class="logo" />
+<div>
+</div>
+</div>
+
+<button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">
+☰
+</button>
+
+<nav id="mainNav" class="nav">
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#menu">Cardápio</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#reserva">Reservas</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content container">
+<h2>Bem-vindo à Estação do Sabor</h2>
+<p>Churrascaria com cortes selecionados, rodízio e ambiente acolhedor. Experiência gastronômica para todos os momentos.</p>
+<div class="hero-actions">
+<a href="#reserva" class="btn btn-primary">Reservar mesa</a>
+<a href="#menu" class="btn btn-secondary">Ver o menu</a>
+</div>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="container section about">
+<div class="about-grid">
+<div class="about-text">
+<h3>Sobre a Estação do Sabor</h3>
+<p>A Estação do Sabor nasceu do amor pelo churrasco tradicional e pela hospitalidade brasileira. Trabalhamos com cortes selecionados, preparo no ponto perfeito e acompanhamentos caseiros. Ambiente agradável para família, amigos e eventos especiais.</p>
+<ul class="features">
+<li> Cortes nobres e rodízio</li>
+<li> Bebidas e carta de vinhos</li>
+<li> Salões para eventos</li>
+<li> Atendimento acolhedor</li>
+</ul>
+</div>
+<div class="about-image">
+<img src="espaco.jpg" alt="Prato de churrasco" />
+</div>
+</div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section menu container">
+<header class="section-header">
+<h3>Nosso Cardápio</h3>
+<p>Cortes, acompanhamentos e opções à la carte — selecionados por nossos mestres churrasqueiros.</p>
+</header>
+
+<div class="menu-grid">
+<article class="menu-card">
+<h4>Cortes Especiais</h4>
+<p class="price">Picanha fatiada</p>
+<p>Suculenta picanha grelhada no ponto — porção para 2-3 pessoas.</p>
+</article>
+
+<article class="menu-card">
+<h4>Rodízio</h4>
+<p class="price">Adulto R$ 59,90</p>
+<p>Variedade de cortes, saladas e sobremesas. Bebida não inclusa.</p>
+</article>
+
+<article class="menu-card">
+<h4>Acompanhamentos</h4>
+<p class="price">Farofa, vinagrete, maionese</p>
+<p>Preparamos acompanhamentos caseiros e frescos todos os dias.</p>
+</article>
+
+<article class="menu-card">
+<h4>Bebidas</h4>
+<p class="price">Cervejas & Vinhos</p>
+<p>Carta selecionada de vinhos e opções geladas para harmonizar.</p>
+</article>
+</div>
+
+<div class="menu-cta">
+<a href="#contato" class="btn btn-outline">Peça pelo delivery / Cardápio QR CODE</a>
+</div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="section gallery container">
+<header class="section-header">
+<h3>Nosso Restaurante</h3>
+<p>Alguns cliques do nosso espaço e dos pratos.</p>
+</header>
+
+<div class="gallery-grid">
+<img src="pratochurrasco.jpg" alt="Churrasco 1" />
+<img src="churrasco.jpg" alt="Churrasco 2" />
+<img src="ambiente.jpg" alt="Ambiente" />
+<img src="sobremesa.jpg" alt="Sobremesa" />
+</div>
+</section>
+
+<!-- RESERVA -->
+<section id="reserva" class="section reservation container">
+<header class="section-header">
+<h3>Reservas</h3>
+<p>Reserve sua mesa — atendemos grupos e eventos.</p>
+</header>
+
+<form id="reservationForm" class="form-grid" action="#" onsubmit="return handleReservation(event)">
+<label>
+Nome
+<input type="text" name="nome" id="nome" required />
+</label>
+
+<label>
+Telefone
+<input type="tel" name="telefone" id="telefone" required placeholder="(xx) 9xxxx-xxxx" />
+</label>
+
+<label>
+Data
+<input type="date" name="data" id="data" required />
+</label>
+
+<label>
+Horário
+<input type="time" name="hora" id="hora" required />
+</label>
+
+<label>
+Pessoas
+<input type="number" name="pessoas" id="pessoas" min="1" max="30" value="2" required />
+</label>
+
+<label class="full">
+Observações
+<textarea name="obs" id="obs" rows="3" placeholder="Ex: Aniversário, mesa próxima à janela..."></textarea>
+</label>
+
+<div class="form-actions full">
+<button type="submit" class="btn btn-primary">Enviar pedido de reserva</button>
+</div>
+</form>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section contact container">
+<header class="section-header">
+<h3>Contato</h3>
+<p>Localização, horários e contato.</p>
+</header>
+
+<div class="contact-grid">
+<div class="contact-card">
+<h4>Endereço</h4>
+<p>Avenida Independência — Centro<br/>Piracicaba - SP</p>
+</div>
+
+<div class="contact-card">
+<h4>Horário</h4>
+<p>Ter–Dom: 11:30 — 23:00<br/>Segunda: Fechado</p>
+</div>
+
+<div class="contact-card">
+<h4>Telefone</h4>
+<p><a href="tel:+5511999999999">+55 (19) 99999-9999</a></p>
+</div>
+
+<div class="contact-card">
+<h4>Cardápio</h4>
+<img src="frame.png" alt="Churrasco 1" />
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>© <span id="year"></span> Estação do Sabor — Todos os direitos reservados.</p>
+<p class="small">Feito com ❤️ para os amantes do churrasco.</p>
+</div>
+</footer>
+
+<script>
+// Atualiza ano no rodapé
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Toggle nav mobile
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle.addEventListener('click', () => {
+const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+navToggle.setAttribute('aria-expanded', String(!expanded));
+mainNav.classList.toggle('open');
+});
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+a.addEventListener('click', function (e) {
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+e.preventDefault();
+target.scrollIntoView({behavior:'smooth', block:'start'});
+if (mainNav.classList.contains('open')) {
+mainNav.classList.remove('open');
+navToggle.setAttribute('aria-expanded', 'false');
+}
+}
+});
+});
+
+// Reserva — validação simples e simulação de envio
+function handleReservation(e) {
+e.preventDefault();
+const nome = document.getElementById('nome').value.trim();
+const tel = document.getElementById('telefone').value.trim();
+const data = document.getElementById('data').value;
+const hora = document.getElementById('hora').value;
+
+if (!nome || !tel || !data || !hora) {
+alert('Por favor preencha os campos obrigatórios.');
+return false;
+}
+
+// Aqui você pode integrar com API / backend ou enviar por email
+alert('Pedido de reserva enviado! Entraremos em contato para confirmar.');
+e.target.reset();
+return false;
+}
+</script>
+</body>
+</html>
